@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N759BPH');</script>
+  <!-- End Google Tag Manager -->
+  <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Questionaire</title>
+</head>
+
+<body>
+
+  <!-- Whole Hero Section -->
+  <div class="hero">
+    <!-- Navigation -->
+    <nav class="nav container">
+      <div class="log">
+        <a href="" onclick="history.go(-1)"><img src="./img/logo.png" alt="logo" id="logo"></a>
+        <a href="" onclick="history.go(-1)"><img src="./img/logo-for-phone.png" alt="logo" id="logo-phone"></a>
+      </div>
+      <div>
+        <a class="boton btn-nav" href="./pages/contact-us/contact.html">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="container">
+      <div class="text">
+        <h4>Fiduciary Financial Advisors</h4>
+        <h1>We Know Where You’ve Been 
+          and How to Help You Get to Where You Want To Go.
+          </h1>
+        <p>Need assistance? <br>
+          Feel free to contact us, and we be more than <br> happy to answer all of your questions.
+        </p>
+        <img src="./img/weDontSellYourData.png" alt="">
+      </div>
+      <div class="questionaire">
+
+      <form id="myForm" name="myForm" onkeydown="return event.key != 'Enter';">
+        
+        <!-- First question -->
+        <div class="q1 question " >
+          <h3>Are you interested in solving a financial problem?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q1" id="a1"
+                value="Yes, I am very interested, I need some help and want to talk to an advisor.">
+              <label for="a1">Yes, I am very interested, I need some help and want to talk to an advisor.</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q1" id="a2" value="I am curious and would like some insectionation.">
+              <label for="a2">I am curious and would like some information.</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q1" id="a3" value="Not really, I’m just exploring.">
+              <label for="a3">Not really, I’m just exploring.</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonNext btn-next btn-n" id="1" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Second question -->
+        <div class="q2 question" style="display: none;">
+          <h3>Please enter your email address</h3>
+          <section>
+            <div>
+              <input type="email" name="q2" id="" placeholder="e.g.johnsmith@gmail.com" required>
+            </div>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="2" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="2" onclick="nextQuestion(id)">Next
+              <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Third question -->
+        <div class="q3 question" style="display: none;">
+          <h3>Please enter your name?</h3>
+          <section>
+            <div>
+              <input type="input" name="q3" id="" placeholder="e.g.John">
+            </div>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="3" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n submitNameBtn" id="3" onclick="nextQuestion(id)">Next
+              <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Fourth question -->
+        <div class="q4 question" style="display: none;">
+          <h3>Do you own a business?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q4" id="a4" value="No">
+              <label for="a4">No</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q4" id="a5" value="Yes">
+              <label for="a5">Yes</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="4" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="4" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Fifth question -->
+        <div class="q5 question" style="display: none;">
+          <h3>Do you have a 401k?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q5" id="a6" value="Yes">
+              <label for="a6">Yes</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q5" id="a7" value="No">
+              <label for="a7">No</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="5" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="5" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Fifth question -->
+        <div class="q6 question" style="display: none;">
+          <h3>Do you have an IRA?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q6" id="a8" value="Yes">
+              <label for="a8">Yes</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q6" id="a9" value="No">
+              <label for="a9">No</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="6" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="6" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Seventh question -->
+        <div class="q7 question" style="display: none;">
+          <h3>How confident are you in your long term financial plan?</h3>
+          <section>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q7" id="a10" value="Very confident">
+                <label for="a10">Very confident</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q7" id="a11" value="Somewhat confident">
+                <label for="a11">Somewhat confident</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q7" id="a12" value="Not confident">
+                <label for="a12">Not confident</label>
+              </div>
+              <hr>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q7" id="a13" value="I don’t have a plan">
+                <label for="a13">I don’t have a plan</label>
+              </div>
+              <hr>
+            </div>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="7" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="7" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Eighth question -->
+        <div class="q8 question" style="display: none;">
+          <h3>What activity is most important to you in retirement?</h3>
+          <section>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q8" id="a14" value="Pursuing hobbies">
+                <label for="a14">Pursuing hobbies</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q8" id="a15" value="Traveling">
+                <label for="a15">Traveling</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q8" id="a16" value="Working part-time">
+                <label for="a16">Working part-time</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q8" id="a17" value="Spending time with family and friends">
+                <label for="a17">Spending time with family and friends</label>
+              </div>
+              <hr>
+            </div>
+            <div class="other">
+              <hr>
+              <div>
+                <input type="radio" name="q8" id="a18" value="Other">
+                <label for="a18">Other</label>
+              </div>
+              <hr>
+            </div>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="8" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="8" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Ninth question -->
+        <div class="q9 question" style="display: none;">
+          <h3>Are you concerned about high taxation in the agricultural industry?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q9" id="a19" value="Yes, I need help">
+              <label for="a19">Yes, I need help</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q9" id="a20" value="No, I’m not worried">
+              <label for="a20">No, I’m not worried</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="9" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="9" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Tenth question -->
+        <div class="q10 question" style="display: none;">
+          <h3>Please estimate your current monthly savings?</h3>
+          <section>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q10" id="a21" value="$500 - $999">
+                <label for="a21">$500 - $999</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q10" id="a22" value="Less than $100">
+                <label for="a22">Less than $100</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q10" id="a23" value="$1,000 - $1,999">
+                <label for="a23">$1,000 - $1,999</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q10" id="a24" value="$100 - $249">
+                <label for="a24">$100 - $249</label>
+              </div>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q10" id="a25" value="Over $2,000">
+                <label for="a25">Over $2,000</label>
+              </div>
+              <hr>
+            </div>
+            <div>
+              <hr>
+              <div>
+                <input type="radio" name="q10" id="a26" value="$250 - $499">
+                <label for="a26">$250 - $499</label>
+              </div>
+              <hr>
+            </div>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="10" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="10" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Eleventh question -->
+        <div class="q11 question" style="display: none;">
+          <h3>Are you interested in protecting your land and other valuable assets?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q11" id="a27" value="Yes">
+              <label for="a27">Yes</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q11" id="a28" value="No">
+              <label for="a28">No</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="11" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="11" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Twelfth question -->
+        <div class="q12 question" style="display: none;">
+          <h3>Are you concerned about high interest rates and their effect on the agricultural industry?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q12" id="a29" value="Yes, I am concerned">
+              <label for="a29">Yes, I am concerned</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q12" id="a30" value="No, I don’t believe it will affect me much">
+              <label for="a30">No, I don’t believe it will affect me much</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="12" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="12" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+        <!-- Thirteen question -->
+        <div class="q13 question" style="display: none;">
+          <h3>Are you concerned about inflation and market volatility?</h3>
+          <section>
+            <hr>
+            <div>
+              <input type="radio" name="q13" id="a31" value="Yes, I am not sure how it will affect me">
+              <label for="a31">Yes, I am not sure how it will affect me</label>
+            </div>
+            <hr>
+            <div>
+              <input type="radio" name="q13" id="a32" value="No">
+              <label for="a32">No</label>
+            </div>
+            <hr>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="13" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="13" onclick="nextQuestion(id)">Next <span>&#10230;</span></button>
+          </div>
+        </div>
+
+
+        <!-- fourteenth  question -->
+        <div class="q14 question" style="display: none;">
+          <h3>When will you retire?</h3>
+          <section>
+            <div>
+              <input type="input" name="q14" id="email" placeholder="e.g.01/12/1965" >
+            </div>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="14" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" class="botonNext btn-next btn-n" id="14"onclick="nextQuestion(id)">Next <span>&#10230;</button>
+          </div>
+      </div>
+
+        <!-- fifteenth  question -->
+        <div class="q15 question" style="display: none;">
+          <section>
+            <h3>Please enter your phone number</h3>
+            <div>
+              <input type="input" name="q15" id="number" placeholder="e.g.(000) 000 - 0000" >
+            </div>
+          </section>
+          <div class="btn">
+            <button type="button" class="botonBack btn-back btn-b" id="15" onclick="backQuestion(id)">&#60; Back</button>
+            <button type="button" form="myForm" class="botonNext btn-next btn-n submitFormBtn" id="15" onclick="nextQuestion(id)">Submit</button>
+          </div>
+        </div>
+      </form>
+        
+
+    </header>
+  </div>
+
+  <!-- Social -->
+  <section class="social container">
+    <div class="logo">
+      <a href="#" onclick="history.go(-1)"><img src="./img/logo.png" alt="logo" id="logo"></a>
+    </div>
+    <div class="icons">
+      <!-- <a href="https://alphacapitalstrategies.com/"><img src="./img/social-network-icons/world.png" alt="world"></a> -->
+      <a href="https://www.facebook.com/retirementempowered"><img src="./img/social-network-icons/facebook.png"
+          alt="Facebook"></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <hr>
+    <p>Copyright © <span id="copyright-year"></span> Retirement Empowered. All Rights Reserved</p>
+  </footer>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N759BPH');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Auto update date -->
+  <script>
+    document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+  </script>
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
